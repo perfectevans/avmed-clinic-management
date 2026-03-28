@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AVMED Clinic Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --dark-bg: #121417;        /* Deep Charcoal (Better than pure black) */
+      --card-bg: #1c1f24;        /* Slightly lighter slate for cards/sidebar */
+      --accent-calm: #52b788;    /* Calm Seafoam Green */
+      --text-dim: #94a3b8;       /* Muted text for labels */
+      --text-bright: #f8fafc;    /* Bright text for headings */
+      --border-soft: #2d323a;    /* Subtle borders */
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-bright);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Minimalist Navbar */
+    .navbar {
+      background-color: var(--dark-bg);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 1rem 2rem;
+    }
+
+    .navbar-brand {
+      color: var(--accent-calm) !important;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    /* Dark Sleek Sidebar */
+    .sidebar {
+      min-height: calc(100vh - 72px);
+      background-color: var(--card-bg);
+      padding: 2rem 0;
+      border-right: 1px solid var(--border-soft);
+    }
+
+    .sidebar a {
+      padding: 0.8rem 2rem;
+      color: var(--text-dim);
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+      border-right: 3px solid transparent;
+    }
+
+    .sidebar a:hover {
+      color: var(--accent-calm);
+      background: linear-gradient(90deg, transparent, rgba(82, 183, 136, 0.05));
+    }
+
+    .sidebar a.active {
+      color: var(--accent-calm);
+      background: rgba(82, 183, 136, 0.1);
+      border-right: 3px solid var(--accent-calm);
+    }
+
+    /* Card & Table Customization */
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      color: var(--text-bright);
+    }
+
+    .table {
+      color: var(--text-dim);
+    }
+
+    .table thead th {
+      background-color: var(--dark-bg);
+      color: var(--accent-calm);
+      border-bottom: 1px solid var(--border-soft);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
+
+    .table td {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 1rem;
+    }
+
+    /* Input/Form styling for dark mode */
+    .form-control, .form-select {
+      background-color: var(--dark-bg);
+      border: 1px solid var(--border-soft);
+      color: white;
+    }
+
+    .form-control:focus {
+      background-color: var(--dark-bg);
+      border-color: var(--accent-calm);
+      color: white;
+      box-shadow: 0 0 0 0.25rem rgba(82, 183, 136, 0.25);
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: var(--text-dim);
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.8rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-calm);
+      border: none;
+      color: #121417;
+      font-weight: 700;
+    }
+
+    .btn-primary:hover {
+      background-color: #40916c;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">AVMED</a>
+      <div class="ms-auto small text-muted">
+        <span style="color: var(--accent-calm);">●</span> Clinical Operations Active
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block sidebar">
+        <div class="px-4 mb-4 text-uppercase fw-bold" style="font-size: 0.7rem; color: #475569; letter-spacing: 2px;">Core</div>
+        <a href="/">Insights</a>
+        <a href="/patient/list">Patient Registry</a>
+        <a href="/appointment/list">Schedule</a>
+        <a href="/vitalsigns/list">Clinical Vitals</a>
+        
+        <div class="px-4 mt-5 mb-4 text-uppercase fw-bold" style="font-size: 0.7rem; color: #475569; letter-spacing: 2px;">Management</div>
+        <a href="/doctor/list">Medical Staff</a>
+        <a href="/nurse/list">Nursing Unit</a>
+        <a href="/hmo/list">Insurance/HMO</a>
+
+        <div class="px-4 mt-5 mb-4 text-uppercase fw-bold" style="font-size: 0.7rem; color: #475569; letter-spacing: 2px;">Financials</div>
+        <a href="/bill/list">Invoicing</a>
+      </nav>
+
+      <main class="col-md-10 py-5 px-md-5">
+          {% block content %}{% endblock %}
+      </main>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 AVMED CLINIC | Encrypted Healthcare Database
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

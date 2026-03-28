@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4 text-primary">Add Doctor</h2>
+  <form method="POST" class="p-4 bg-white shadow-sm rounded">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Doctor ID</label>
+        <input type="number" name="doctor_id" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Gender</label>
+        <input type="text" name="gender" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Specialization</label>
+        <input type="text" name="specialization" class="form-control">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">License Number</label>
+        <input type="text" name="license_number" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Position</label>
+        <input type="text" name="position" class="form-control">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Call Duty Status</label>
+        <input type="text" name="call_duty_status" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Unit ID</label>
+        <input type="number" name="unit_id" class="form-control">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Add Doctor</button>
+  </form>
+</div>
+{% endblock %}

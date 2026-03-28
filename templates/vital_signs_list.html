@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <h2 class="mb-4 text-primary">Vital Signs List</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>ID</th>
+              <th>Appointment ID</th>
+              <th>Nurse ID</th>
+              <th>Temperature</th>
+              <th>Pulse</th>
+              <th>Blood Pressure</th>
+              <th>Respiration Rate</th>
+              <th>Risk Status</th> </tr>
+          </thead>
+          <tbody>
+            {% for vital in vitals %}
+            <tr style="background-color: {{ vital.row_color }};">
+              <td>{{ vital.Vital_ID }}</td>
+              <td>{{ vital.Appointment_ID }}</td>
+              <td>{{ vital.Nurse_ID }}</td>
+              <td>{{ vital.Temperature }}°C</td>
+              <td>{{ vital.Pulse }}</td>
+              <td>{{ vital.Blood_Pressure }}</td>
+              <td>{{ vital.Respiration_Rate }}</td>
+              <td><strong>{{ vital.risk_status }}</strong></td> </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

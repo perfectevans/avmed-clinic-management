@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4 text-primary">Add HMO</h2>
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">HMO ID</label>
+          <input type="number" name="hmo_id" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Position</label>
+          <input type="text" name="position" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Is Head <small class="text-muted">(1 = Yes, 0 = No)</small></label>
+          <input type="number" name="is_head" class="form-control" min="0" max="1">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add HMO</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

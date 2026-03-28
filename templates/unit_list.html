@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4 text-primary">Units List</h2>
+  <table class="table table-striped table-bordered shadow-sm">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">Unit ID</th>
+        <th scope="col">Unit Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for unit in units %}
+      <tr>
+        <td>{{ unit.Unit_ID }}</td>
+        <td>{{ unit.Unit_Name }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

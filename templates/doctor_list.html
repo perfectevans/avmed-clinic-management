@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4 text-primary">Doctors List</h2>
+
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Specialization</th>
+              <th>License Number</th>
+              <th>Position</th>
+              <th>Call Duty Status</th>
+              <th>Unit ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for doctor in doctors %}
+            <tr>
+              <td>{{ doctor.Doctor_ID }}</td>
+              <td>{{ doctor.Name }}</td>
+              <td>{{ doctor.Gender }}</td>
+              <td>{{ doctor.Specialization }}</td>
+              <td>{{ doctor.License_Number }}</td>
+              <td>{{ doctor.Position }}</td>
+              <td>{{ doctor.Call_Duty_Status }}</td>
+              <td>{{ doctor.Unit_ID }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

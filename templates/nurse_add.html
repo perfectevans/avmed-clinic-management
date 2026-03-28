@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4 text-primary">Add Nurse</h2>
+
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">Nurse ID</label>
+          <input type="number" name="nurse_id" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Gender</label>
+          <input type="text" name="gender" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Qualification</label>
+          <input type="text" name="qualification" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">License Number</label>
+          <input type="text" name="license_number" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Shift</label>
+          <input type="text" name="shift" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Position</label>
+          <input type="text" name="position" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Call Duty Status</label>
+          <input type="text" name="call_duty_status" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Unit ID</label>
+          <input type="number" name="unit_id" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Nurse</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

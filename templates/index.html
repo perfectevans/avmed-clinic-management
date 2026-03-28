@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1 class="mb-5 text-primary fw-bold">Welcome to the AVMED Clinic Management System</h1>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- UNIT -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Units</h5>
+          <a href="{{ url_for('add_unit') }}" class="btn btn-primary mb-2 w-100">Add Unit</a>
+          <a href="{{ url_for('list_unit') }}" class="btn btn-outline-primary w-100">View Units</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Doctors</h5>
+          <a href="{{ url_for('add_doctor') }}" class="btn btn-primary mb-2 w-100">Add Doctor</a>
+          <a href="{{ url_for('list_doctor') }}" class="btn btn-outline-primary w-100">View Doctors</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NURSE -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Nurses</h5>
+          <a href="{{ url_for('add_nurse') }}" class="btn btn-primary mb-2 w-100">Add Nurse</a>
+          <a href="{{ url_for('list_nurse') }}" class="btn btn-outline-primary w-100">View Nurses</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATIENT -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Patients</h5>
+          <a href="{{ url_for('add_patient') }}" class="btn btn-primary mb-2 w-100">Add Patient</a>
+          <a href="{{ url_for('list_patient') }}" class="btn btn-outline-primary w-100">View Patients</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HMO -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">HMOs</h5>
+          <a href="{{ url_for('add_hmo') }}" class="btn btn-primary mb-2 w-100">Add HMO</a>
+          <a href="{{ url_for('list_hmo') }}" class="btn btn-outline-primary w-100">View HMOs</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- APPOINTMENT -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Appointments</h5>
+          <a href="{{ url_for('add_appointment') }}" class="btn btn-primary mb-2 w-100">Add Appointment</a>
+          <a href="{{ url_for('list_appointment') }}" class="btn btn-outline-primary w-100">View Appointments</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VITAL SIGNS -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Vital Signs</h5>
+          <a href="{{ url_for('add_vital_signs') }}" class="btn btn-primary mb-2 w-100">Add Vital Signs</a>
+          <a href="{{ url_for('list_vital_signs') }}" class="btn btn-outline-primary w-100">View Vital Signs</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRESCRIPTION -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Prescriptions</h5>
+          <a href="{{ url_for('add_prescription') }}" class="btn btn-primary mb-2 w-100">Add Prescription</a>
+          <a href="{{ url_for('list_prescription') }}" class="btn btn-outline-primary w-100">View Prescriptions</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BILL -->
+    <div class="col">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Bills</h5>
+          <a href="{{ url_for('add_bill') }}" class="btn btn-primary mb-2 w-100">Add Bill</a>
+          <a href="{{ url_for('list_bill') }}" class="btn btn-outline-primary w-100">View Bills</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4 text-primary">Add Patient</h2>
+
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">Patient ID</label>
+          <input type="number" name="patient_id" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Age</label>
+          <input type="number" name="age" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sex</label>
+          <input type="text" name="sex" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Date of Birth</label>
+          <input type="date" name="date_of_birth" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <input type="text" name="address" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="text" name="phone_number" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Next of Kin</label>
+          <input type="text" name="next_of_kin" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Registration Date</label>
+          <input type="date" name="registration_date" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Condition Type</label>
+          <input type="text" name="condition_type" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">HMO ID</label>
+          <input type="number" name="hmo_id" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Patient</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

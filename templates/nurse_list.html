@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mb-4 text-primary">Nurses List</h2>
+
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="table-primary">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Qualification</th>
+              <th>License Number</th>
+              <th>Shift</th>
+              <th>Position</th>
+              <th>Call Duty Status</th>
+              <th>Unit ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for nurse in nurses %}
+            <tr>
+              <td>{{ nurse.Nurse_ID }}</td>
+              <td>{{ nurse.Name }}</td>
+              <td>{{ nurse.Gender }}</td>
+              <td>{{ nurse.Qualification }}</td>
+              <td>{{ nurse.License_Number }}</td>
+              <td>{{ nurse.Shift }}</td>
+              <td>{{ nurse.Position }}</td>
+              <td>{{ nurse.Call_Duty_Status }}</td>
+              <td>{{ nurse.Unit_ID }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

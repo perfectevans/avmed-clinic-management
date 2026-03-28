@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <h2 class="mb-4 text-primary">Bills List</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="table-primary">
+            <tr>
+              <th>ID</th>
+              <th>Prescription ID</th>
+              <th>Amount</th>
+              <th>Paid Status</th>
+              <th>Payment Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for bill in bills %}
+            <tr>
+              <td>{{ bill.Bill_ID }}</td>
+              <td>{{ bill.Prescription_ID }}</td>
+              <td>{{ bill.Amount }}</td>
+              <td>{{ bill.Paid_Status }}</td>
+              <td>{{ bill.Payment_Date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <h2 class="mb-4 text-primary">Add Appointment</h2>
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">Appointment ID</label>
+          <input type="number" name="appointment_id" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Patient ID</label>
+          <input type="number" name="patient_id" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Doctor ID</label>
+          <input type="number" name="doctor_id" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Date</label>
+          <input type="date" name="date" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Time</label>
+          <input type="time" name="time" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Status</label>
+          <input type="text" name="status" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Booking Source</label>
+          <input type="text" name="booking_source" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Appointment</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
